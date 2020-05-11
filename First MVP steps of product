@@ -1,0 +1,25 @@
+There have some questions about this part
+1、BACKGROUND
+(*)value-show our product value for a specific application scenario.
+(*)safety-our product like automobile,we should make sure it's 100% safety when working.
+(+*****)emergency braking-make sure the Robot can immediately stop
+(+*)space-because the limit of UWB technology, so we should consider some technology like Ad hoc network when our product were used in big space.
+(+)frequency-consider the frequency that we used whether will inference frequency that airport using
+
+
+
+
+
+2、Part 1
+install suitable environment on raspberry4, 
+make sure that raspberry and car(mini AGV) can communicate
+(+)Establish the environment for MINI AGV motion in PC
+main in-charge---ZC（LF SFF） 
+3、Part 2
+successfuly debugging UWB system
+make sure that car、raspberry ＆ UWB can communicate
+main in-charge---FZC
+4、Part 3
+RGBD camera debugging 
+make sure that raspberry、camera and UWB can communicate
+main in-charge---LB (Zhang jiahao)
