@@ -20,14 +20,12 @@ int main()
 
     //Instruct pipeline to start streaming with the requested configuration
     pipe.start(cfg);
-
+    const auto window_name = "Display Image";
+    namedWindow(window_name, WINDOW_AUTOSIZE);
     // Camera warmup - dropping several first frames to let auto-exposure stabilize
-    rs2::frameset frames;
-    for(int i = 0; i < 30; i++)
-    {
-        //Wait for all configured streams to produce a frame
-        frames = pipe.wait_for_frames();
-    }
+    
+    while(waitKey(1) < 0 && getWindowProperty(window_name, WND_PROP_AUTOSIZE) >= 0){
+    rs2::frameset frames = pipe.wait_for_frames();
 
     //Get each frame
     rs2::frame color_frame = frames.get_color_frame();
@@ -36,9 +34,9 @@ int main()
     Mat color(Size(640, 480), CV_8UC3, (void*)color_frame.get_data(), Mat::AUTO_STEP);
 
     // Display in a GUI
-    namedWindow("Display Image", WINDOW_AUTOSIZE );
     imshow("Display Image", color);
-
+        
+    }
     waitKey(0);
 
     return 0;
