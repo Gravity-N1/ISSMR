@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/slam/ISSMR/dnn/./cv-helpers.hpp
+librealsense2/rs.hpp
+-
+opencv2/opencv.hpp
+-
+exception
+-
+
+/slam/ISSMR/dnn/main.cpp
+opencv2/dnn.hpp
+-
+librealsense2/rs.hpp
+-
+./cv-helpers.hpp
+/slam/ISSMR/dnn/./cv-helpers.hpp
+

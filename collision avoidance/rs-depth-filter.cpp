@@ -9,7 +9,7 @@
 
 #include "tiny-profiler.h"
 #include "downsample.h"
-
+using namespace std;
 rs2_intrinsics operator/(const rs2_intrinsics& i, float f)
 {
     rs2_intrinsics  res = i;
@@ -282,20 +282,59 @@ int main(int argc, char * argv[]) try
     while (waitKey(1) < 0 && getWindowProperty(window_name, WND_PROP_AUTOSIZE) >= 0)
     {
         rs2::frameset data = pipe.wait_for_frames(); // Wait for next set of frames from the camera
+        rs2::depth_frame depth = data.get_depth_frame();
+        float width = depth.get_width();
+        float height = depth.get_height();
+        float dist_to_center[1000][1000];
+        int flag=0;float yuzhi=0.5;
+        float aaa=0;int num_pz=0;
+        for(int i=width/4;i<width*3/4;i++){
+            for(int j=0;j<height;j++)
+            {
+                dist_to_center[i][j] = depth.get_distance(i,j);
+                aaa=dist_to_center[i][j];
+                if (aaa>0&&aaa<yuzhi){
+                    num_pz++;
+                }
+                //cout<<dist_to_center[i][j];
+            }
+            //cout<<endl;
+        }
+        if (num_pz>5){
+            flag=1;
+            cout<<"There is the obstacle"<<endl;
+        }
+        else{
+            flag=0;
+            cout<<"No obstacle"<<endl;
+        }
+        
+        
+        //std::cout << "The camera is facing an object " << dist_to_center << " meters away \r";
+        
+        
+        
+        
+        
+        
+        
+        
 
-        data = data.apply_filter(filter);
-
-        rs2::frame depth = data.get_depth_frame().apply_filter(color_map);
-
-        // Query frame size (width and height)
-        const int w = depth.as<rs2::video_frame>().get_width();
-        const int h = depth.as<rs2::video_frame>().get_height();
-
-        // Create OpenCV matrix of size (w,h) from the colorized depth data
-        Mat image(Size(w, h), CV_8UC3, (void*)depth.get_data(), Mat::AUTO_STEP);
-
-        // Update the window with new data
-        imshow(window_name, image);
+//         //data = data.apply_filter(filter);
+// 
+//         rs2::frame depth = data.get_depth_frame().apply_filter(color_map);
+// 
+//         // Query frame size (width and height)
+//         const int w = depth.as<rs2::video_frame>().get_width();
+//         const int h = depth.as<rs2::video_frame>().get_height();
+// 
+//         // Create OpenCV matrix of size (w,h) from the colorized depth data
+//         Mat image(Size(w, h), CV_8UC1, (void*)depth.get_data(), Mat::AUTO_STEP);
+//         
+//         // Update the window with new data
+//         imshow(window_name, image);
+//         //waitKey(0);
+        
     }
 
     return EXIT_SUCCESS;

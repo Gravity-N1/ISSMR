@@ -1,12 +1,12 @@
 [
 {
   "directory": "/slam/ISSMR/collision avoidance/build",
-  "command": "/usr/bin/c++   -I\"/slam/ISSMR/collision avoidance/rs-depth-filter\" -I\"/slam/ISSMR/collision avoidance/./common\" -isystem /usr/include/opencv   -std=c++11 -msse4.1   -o CMakeFiles/rs-depth-filter.dir/rs-depth-filter.cpp.o -c \"/slam/ISSMR/collision avoidance/rs-depth-filter.cpp\"",
+  "command": "/usr/bin/c++   -I\"/slam/ISSMR/collision avoidance/rs-depth-filter\" -I\"/slam/ISSMR/collision avoidance/./common\" -isystem /usr/include/opencv   -std=c++11 -msse4.1 -g   -o CMakeFiles/rs-depth-filter.dir/rs-depth-filter.cpp.o -c \"/slam/ISSMR/collision avoidance/rs-depth-filter.cpp\"",
   "file": "/slam/ISSMR/collision avoidance/rs-depth-filter.cpp"
 },
 {
   "directory": "/slam/ISSMR/collision avoidance/build",
-  "command": "/usr/bin/c++   -I\"/slam/ISSMR/collision avoidance/rs-depth-filter\" -I\"/slam/ISSMR/collision avoidance/./common\" -isystem /usr/include/opencv   -std=c++11 -msse4.1   -o CMakeFiles/rs-depth-filter.dir/downsample.cpp.o -c \"/slam/ISSMR/collision avoidance/downsample.cpp\"",
+  "command": "/usr/bin/c++   -I\"/slam/ISSMR/collision avoidance/rs-depth-filter\" -I\"/slam/ISSMR/collision avoidance/./common\" -isystem /usr/include/opencv   -std=c++11 -msse4.1 -g   -o CMakeFiles/rs-depth-filter.dir/downsample.cpp.o -c \"/slam/ISSMR/collision avoidance/downsample.cpp\"",
   "file": "/slam/ISSMR/collision avoidance/downsample.cpp"
 }
 ]

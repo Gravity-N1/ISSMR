@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.1.0)
 
 project(RealSenseDepthFilterExample)
-
+SET(CMAKE_BUILD_TYPE "Debug")
 find_package(OpenCV REQUIRED)
 set(DEPENDENCIES realsense2 ${OpenCV_LIBS})
 
