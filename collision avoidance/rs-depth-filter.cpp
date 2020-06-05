@@ -282,7 +282,8 @@ int main(int argc, char * argv[]) try
     while (waitKey(1) < 0 && getWindowProperty(window_name, WND_PROP_AUTOSIZE) >= 0)
     {
         rs2::frameset data = pipe.wait_for_frames(); // Wait for next set of frames from the camera
-        rs2::depth_frame depth = data.get_depth_frame();
+        data = data.apply_filter(filter);
+	rs2::depth_frame depth = data.get_depth_frame();
         float width = depth.get_width();
         float height = depth.get_height();
         float dist_to_center[1000][1000];
