@@ -1,4 +1,4 @@
-# Install script for directory: /slam/ISSMR/test
+# Install script for directory: /slam/ISSMR/show_by_opencv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/slam/ISSMR/test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/slam/ISSMR/show_by_opencv/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

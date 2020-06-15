@@ -390,6 +390,8 @@ int main()
 
     //Instruct pipeline to start streaming with the requested configuration
     pipe.start(cfg);
+
+
     const auto window_name = "Display Image";
     namedWindow(window_name, WINDOW_AUTOSIZE);
     // Camera warmup - dropping several first frames to let auto-exposure stabilize

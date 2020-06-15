@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/slam/imageSegmentation-master/color.cpp
+/slam/ISSMR/imageSegmentation-master/color.cpp
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -14,7 +14,7 @@ opencv2/highgui/highgui.hpp
 iostream
 -
 opencv2/imgproc/imgproc.hpp
-/slam/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
 math.h
 -
 queue
@@ -24,9 +24,9 @@ time.h
 fstream
 -
 header.h
-/slam/imageSegmentation-master/header.h
+/slam/ISSMR/imageSegmentation-master/header.h
 
-/slam/imageSegmentation-master/header.h
+/slam/ISSMR/imageSegmentation-master/header.h
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -34,7 +34,7 @@ opencv2/highgui/highgui.hpp
 iostream
 -
 opencv2/imgproc/imgproc.hpp
-/slam/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
 math.h
 -
 queue
@@ -44,19 +44,19 @@ time.h
 fstream
 -
 
-/slam/imageSegmentation-master/histogram.cpp
+/slam/ISSMR/imageSegmentation-master/histogram.cpp
 opencv2/highgui/highgui.hpp
-/slam/imageSegmentation-master/opencv2/highgui/highgui.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/slam/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
 iostream
 -
 stdio.h
 -
 header.h
-/slam/imageSegmentation-master/header.h
+/slam/ISSMR/imageSegmentation-master/header.h
 
-/slam/imageSegmentation-master/texture.cpp
+/slam/ISSMR/imageSegmentation-master/texture.cpp
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -64,7 +64,7 @@ opencv2/highgui/highgui.hpp
 iostream
 -
 opencv2/imgproc/imgproc.hpp
-/slam/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
 math.h
 -
 queue
@@ -74,5 +74,5 @@ time.h
 fstream
 -
 header.h
-/slam/imageSegmentation-master/header.h
+/slam/ISSMR/imageSegmentation-master/header.h
 

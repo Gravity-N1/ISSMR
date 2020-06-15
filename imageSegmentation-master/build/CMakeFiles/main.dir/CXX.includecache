@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/slam/imageSegmentation-master/header.h
+/slam/ISSMR/imageSegmentation-master/header.h
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -14,7 +14,7 @@ opencv2/highgui/highgui.hpp
 iostream
 -
 opencv2/imgproc/imgproc.hpp
-/slam/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
 math.h
 -
 queue
@@ -24,7 +24,7 @@ time.h
 fstream
 -
 
-/slam/imageSegmentation-master/main.cpp
+/slam/ISSMR/imageSegmentation-master/main.cpp
 librealsense2/rs.hpp
 -
 opencv2/photo/photo.hpp
@@ -38,7 +38,7 @@ opencv2/highgui/highgui.hpp
 iostream
 -
 opencv2/imgproc/imgproc.hpp
-/slam/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
+/slam/ISSMR/imageSegmentation-master/opencv2/imgproc/imgproc.hpp
 math.h
 -
 queue
@@ -48,5 +48,5 @@ time.h
 fstream
 -
 header.h
-/slam/imageSegmentation-master/header.h
+/slam/ISSMR/imageSegmentation-master/header.h
 

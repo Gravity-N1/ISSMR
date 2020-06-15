@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /slam/imageSegmentation-master
+CMAKE_SOURCE_DIR = /slam/ISSMR/imageSegmentation-master
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /slam/imageSegmentation-master/build
+CMAKE_BINARY_DIR = /slam/ISSMR/imageSegmentation-master/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/seg_shared.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/seg_shared.dir/flags.make
 
 CMakeFiles/seg_shared.dir/histogram.cpp.o: CMakeFiles/seg_shared.dir/flags.make
 CMakeFiles/seg_shared.dir/histogram.cpp.o: ../histogram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/slam/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/seg_shared.dir/histogram.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/seg_shared.dir/histogram.cpp.o -c /slam/imageSegmentation-master/histogram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/slam/ISSMR/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/seg_shared.dir/histogram.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/seg_shared.dir/histogram.cpp.o -c /slam/ISSMR/imageSegmentation-master/histogram.cpp
 
 CMakeFiles/seg_shared.dir/histogram.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/seg_shared.dir/histogram.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /slam/imageSegmentation-master/histogram.cpp > CMakeFiles/seg_shared.dir/histogram.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /slam/ISSMR/imageSegmentation-master/histogram.cpp > CMakeFiles/seg_shared.dir/histogram.cpp.i
 
 CMakeFiles/seg_shared.dir/histogram.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/seg_shared.dir/histogram.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /slam/imageSegmentation-master/histogram.cpp -o CMakeFiles/seg_shared.dir/histogram.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /slam/ISSMR/imageSegmentation-master/histogram.cpp -o CMakeFiles/seg_shared.dir/histogram.cpp.s
 
 CMakeFiles/seg_shared.dir/histogram.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/seg_shared.dir/histogram.cpp.o.provides.build: CMakeFiles/seg_shared.
 
 CMakeFiles/seg_shared.dir/color.cpp.o: CMakeFiles/seg_shared.dir/flags.make
 CMakeFiles/seg_shared.dir/color.cpp.o: ../color.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/slam/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/seg_shared.dir/color.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/seg_shared.dir/color.cpp.o -c /slam/imageSegmentation-master/color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/slam/ISSMR/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/seg_shared.dir/color.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/seg_shared.dir/color.cpp.o -c /slam/ISSMR/imageSegmentation-master/color.cpp
 
 CMakeFiles/seg_shared.dir/color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/seg_shared.dir/color.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /slam/imageSegmentation-master/color.cpp > CMakeFiles/seg_shared.dir/color.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /slam/ISSMR/imageSegmentation-master/color.cpp > CMakeFiles/seg_shared.dir/color.cpp.i
 
 CMakeFiles/seg_shared.dir/color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/seg_shared.dir/color.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /slam/imageSegmentation-master/color.cpp -o CMakeFiles/seg_shared.dir/color.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /slam/ISSMR/imageSegmentation-master/color.cpp -o CMakeFiles/seg_shared.dir/color.cpp.s
 
 CMakeFiles/seg_shared.dir/color.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/seg_shared.dir/color.cpp.o.provides.build: CMakeFiles/seg_shared.dir/
 
 CMakeFiles/seg_shared.dir/texture.cpp.o: CMakeFiles/seg_shared.dir/flags.make
 CMakeFiles/seg_shared.dir/texture.cpp.o: ../texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/slam/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/seg_shared.dir/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/seg_shared.dir/texture.cpp.o -c /slam/imageSegmentation-master/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/slam/ISSMR/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/seg_shared.dir/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/seg_shared.dir/texture.cpp.o -c /slam/ISSMR/imageSegmentation-master/texture.cpp
 
 CMakeFiles/seg_shared.dir/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/seg_shared.dir/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /slam/imageSegmentation-master/texture.cpp > CMakeFiles/seg_shared.dir/texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /slam/ISSMR/imageSegmentation-master/texture.cpp > CMakeFiles/seg_shared.dir/texture.cpp.i
 
 CMakeFiles/seg_shared.dir/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/seg_shared.dir/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /slam/imageSegmentation-master/texture.cpp -o CMakeFiles/seg_shared.dir/texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /slam/ISSMR/imageSegmentation-master/texture.cpp -o CMakeFiles/seg_shared.dir/texture.cpp.s
 
 CMakeFiles/seg_shared.dir/texture.cpp.o.requires:
 
@@ -143,7 +143,7 @@ libseg_shared.so: CMakeFiles/seg_shared.dir/color.cpp.o
 libseg_shared.so: CMakeFiles/seg_shared.dir/texture.cpp.o
 libseg_shared.so: CMakeFiles/seg_shared.dir/build.make
 libseg_shared.so: CMakeFiles/seg_shared.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/slam/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libseg_shared.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/slam/ISSMR/imageSegmentation-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libseg_shared.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/seg_shared.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -162,6 +162,6 @@ CMakeFiles/seg_shared.dir/clean:
 .PHONY : CMakeFiles/seg_shared.dir/clean
 
 CMakeFiles/seg_shared.dir/depend:
-	cd /slam/imageSegmentation-master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /slam/imageSegmentation-master /slam/imageSegmentation-master /slam/imageSegmentation-master/build /slam/imageSegmentation-master/build /slam/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/DependInfo.cmake --color=$(COLOR)
+	cd /slam/ISSMR/imageSegmentation-master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /slam/ISSMR/imageSegmentation-master /slam/ISSMR/imageSegmentation-master /slam/ISSMR/imageSegmentation-master/build /slam/ISSMR/imageSegmentation-master/build /slam/ISSMR/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/seg_shared.dir/depend
 

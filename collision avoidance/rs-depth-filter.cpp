@@ -310,32 +310,31 @@ int main(int argc, char * argv[]) try
             cout<<"No obstacle"<<endl;
         }
         
-        
+	std::ofstream outFile;
+    //打开文件
+    outFile.open("Test.txt");
+    //写入数据
+        outFile << flag;
+    //关闭文件
+    outFile.close();
+    
         //std::cout << "The camera is facing an object " << dist_to_center << " meters away \r";
-        
-        
-        
-        
-        
-        
-        
-        
+    
+        rs2::frameset data_1 = pipe.wait_for_frames(); // Wait for next set of frames from the camera
 
-//         //data = data.apply_filter(filter);
-// 
-//         rs2::frame depth = data.get_depth_frame().apply_filter(color_map);
-// 
-//         // Query frame size (width and height)
-//         const int w = depth.as<rs2::video_frame>().get_width();
-//         const int h = depth.as<rs2::video_frame>().get_height();
-// 
-//         // Create OpenCV matrix of size (w,h) from the colorized depth data
-//         Mat image(Size(w, h), CV_8UC1, (void*)depth.get_data(), Mat::AUTO_STEP);
-//         
-//         // Update the window with new data
-//         imshow(window_name, image);
-//         //waitKey(0);
-        
+        data_1 = data_1.apply_filter(filter);
+
+        rs2::frame depth_1 = data_1.get_depth_frame().apply_filter(color_map);
+
+        // Query frame size (width and height)
+        const int w = depth_1.as<rs2::video_frame>().get_width();
+        const int h = depth_1.as<rs2::video_frame>().get_height();
+
+        // Create OpenCV matrix of size (w,h) from the colorized depth data
+        Mat image(Size(w, h), CV_8UC3, (void*)depth_1.get_data(), Mat::AUTO_STEP);
+
+        // Update the window with new data
+        imshow(window_name, image);
     }
 
     return EXIT_SUCCESS;

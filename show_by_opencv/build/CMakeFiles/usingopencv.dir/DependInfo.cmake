@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/slam/ISSMR/test/main.cpp" "/slam/ISSMR/test/build/CMakeFiles/usingopencv.dir/main.cpp.o"
+  "/slam/ISSMR/show_by_opencv/main.cpp" "/slam/ISSMR/show_by_opencv/build/CMakeFiles/usingopencv.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

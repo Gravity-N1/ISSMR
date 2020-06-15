@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/slam/imageSegmentation-master/color.cpp" "/slam/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/color.cpp.o"
-  "/slam/imageSegmentation-master/histogram.cpp" "/slam/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/histogram.cpp.o"
-  "/slam/imageSegmentation-master/texture.cpp" "/slam/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/texture.cpp.o"
+  "/slam/ISSMR/imageSegmentation-master/color.cpp" "/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/color.cpp.o"
+  "/slam/ISSMR/imageSegmentation-master/histogram.cpp" "/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/histogram.cpp.o"
+  "/slam/ISSMR/imageSegmentation-master/texture.cpp" "/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/seg_shared.dir/texture.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

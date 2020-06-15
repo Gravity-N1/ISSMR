@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /slam/ISSMR/test
+CMAKE_SOURCE_DIR = /slam/ISSMR/show_by_opencv
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /slam/ISSMR/test/build
+CMAKE_BINARY_DIR = /slam/ISSMR/show_by_opencv/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/usingopencv.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /slam/ISSMR/test/build
 CMakeFiles/usingopencv.dir/all:
 	$(MAKE) -f CMakeFiles/usingopencv.dir/build.make CMakeFiles/usingopencv.dir/depend
 	$(MAKE) -f CMakeFiles/usingopencv.dir/build.make CMakeFiles/usingopencv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/slam/ISSMR/test/build/CMakeFiles --progress-num=1,2 "Built target usingopencv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/slam/ISSMR/show_by_opencv/build/CMakeFiles --progress-num=1,2 "Built target usingopencv"
 .PHONY : CMakeFiles/usingopencv.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/usingopencv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/usingopencv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /slam/ISSMR/test/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /slam/ISSMR/show_by_opencv/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/usingopencv.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /slam/ISSMR/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /slam/ISSMR/show_by_opencv/build/CMakeFiles 0
 .PHONY : CMakeFiles/usingopencv.dir/rule
 
 # Convenience name for target.
