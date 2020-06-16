@@ -6,6 +6,8 @@ find_package(OpenCV REQUIRED)
 find_package(realsense2 REQUIRED)
 add_executable(main main.cpp)
 INCLUDE_DIRECTORIES(~/)
+add_executable(pic pic.cpp)
+target_link_libraries(pic ${OpenCV_LIBS} ${realsense2_LIBRARY})
 
 target_link_libraries(main ${OpenCV_LIBS} seg_shared ${realsense2_LIBRARY})
 add_library(seg_shared SHARED histogram.cpp color.cpp texture.cpp)

@@ -408,7 +408,8 @@ int main()
     //Mat image= imread("/slam/imageSegmentation-master/a.jpg",1);
     //hist(image);
     //imwrite("originalImage.jpg",image);
-
+//    imshow("image",image);
+//    waitKey(0);
 
     //resize(image, image, Size(320,480));
 
@@ -418,6 +419,8 @@ int main()
     int winSize=20;
     //pair<Mat, vector<pair<pair<Point, Vec3b> ,int > > >retVal=
     Mat combined = colSeg(image, winSize);
+    imshow("image",image);
+    waitKey(0);
     crop(combined, image);
     
     

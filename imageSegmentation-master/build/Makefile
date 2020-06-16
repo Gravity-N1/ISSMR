@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /slam/ISSMR/imageSegmentation-master/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named seg_shared
+
+# Build rule for target.
+seg_shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 seg_shared
+.PHONY : seg_shared
+
+# fast build rule for target.
+seg_shared/fast:
+	$(MAKE) -f CMakeFiles/seg_shared.dir/build.make CMakeFiles/seg_shared.dir/build
+.PHONY : seg_shared/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -124,17 +137,17 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named seg_shared
+# Target rules for targets named pic
 
 # Build rule for target.
-seg_shared: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 seg_shared
-.PHONY : seg_shared
+pic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pic
+.PHONY : pic
 
 # fast build rule for target.
-seg_shared/fast:
-	$(MAKE) -f CMakeFiles/seg_shared.dir/build.make CMakeFiles/seg_shared.dir/build
-.PHONY : seg_shared/fast
+pic/fast:
+	$(MAKE) -f CMakeFiles/pic.dir/build.make CMakeFiles/pic.dir/build
+.PHONY : pic/fast
 
 color.o: color.cpp.o
 
@@ -217,6 +230,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+pic.o: pic.cpp.o
+
+.PHONY : pic.o
+
+# target to build an object file
+pic.cpp.o:
+	$(MAKE) -f CMakeFiles/pic.dir/build.make CMakeFiles/pic.dir/pic.cpp.o
+.PHONY : pic.cpp.o
+
+pic.i: pic.cpp.i
+
+.PHONY : pic.i
+
+# target to preprocess a source file
+pic.cpp.i:
+	$(MAKE) -f CMakeFiles/pic.dir/build.make CMakeFiles/pic.dir/pic.cpp.i
+.PHONY : pic.cpp.i
+
+pic.s: pic.cpp.s
+
+.PHONY : pic.s
+
+# target to generate assembly for a file
+pic.cpp.s:
+	$(MAKE) -f CMakeFiles/pic.dir/build.make CMakeFiles/pic.dir/pic.cpp.s
+.PHONY : pic.cpp.s
+
 texture.o: texture.cpp.o
 
 .PHONY : texture.o
@@ -250,10 +290,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
+	@echo "... seg_shared"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... seg_shared"
+	@echo "... rebuild_cache"
+	@echo "... pic"
 	@echo "... color.o"
 	@echo "... color.i"
 	@echo "... color.s"
@@ -263,6 +304,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... pic.o"
+	@echo "... pic.i"
+	@echo "... pic.s"
 	@echo "... texture.o"
 	@echo "... texture.i"
 	@echo "... texture.s"
