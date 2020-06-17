@@ -13,16 +13,8 @@ struct Dual_PID_Para  Chassis_Follow_PID=
 };
 #endif
 
-#ifdef TANK_2 
-struct Dual_PID_Para  Chassis_Follow_PID=
-{ 
-	200,0,0,
-	200,0,0 
-};
-#endif
 
-
-//½Ç¶È±Õ»·²ÎÊı
+//è§’åº¦é—­ç¯å‚æ•°
 struct PID_PARA Chassis_Angle_para = 
 {
 	30,0,0,//shell 
@@ -30,12 +22,10 @@ struct PID_PARA Chassis_Angle_para =
 };
 
 
-int16_t Chasiss_Follow_Limit=5000;  //µ×ÅÌ¸úËæÊä³öÏŞ·ù
+int16_t Chasiss_Follow_Limit=5000;  //åº•ç›˜è·Ÿéšè¾“å‡ºé™å¹…
 float	chassis_f0 = 0;
 float chassis_r0 = 0;
 float chassis_y0 = 0; 
-
-float Chassis_Target_Angle=0; //µ×ÅÌÓëÔÆÌ¨µÄÄ¿±ê½Ç¶È
 
 #define Mid_Angle 25
 u16 Psc_Angle =30;
@@ -101,100 +91,9 @@ void Rock_Random(u8 flag)
 
 }
 
-	/*******************************************
-	º¯ÊıÃû£ºvoid Lets_Rock(uint8_t flag)
-  ¹¦ÄÜ£ºµ×ÅÌÒ¡°Ú¿ØÖÆ
-	ÊäÈë£ºÊ¹ÄÜ±êÖ¾Î»
-	·µ»Ø£ºÎŞ
-  ×¢Òâ£º´Ëº¯ÊıÔÚÓÚ¼ÆËãÒ¡°ÚÄ£Ê½ÏÂµ±Ç°Ê±¿Ìµ×ÅÌÓëÔÆÌ¨µÄ½Ç¶È£¬´æÔÚChassis_Target_Angle±äÁ¿Àï
-	*********************************************/
-void Lets_Rock(uint8_t flag )
-{
-	static uint32_t cnt = 0;
-	static int16_t time_ms =17;	 //ĞŞ¸Ä´ËÖµµ÷ÕûÒ¡°ÚµÄËÙ¶È
-	static float angle = 50.0f;  //Ò¡°Ú½Ç¶È
-	static float k ;
-
-	k = angle / time_ms;	
-	if( flag == 0 )
-	{
-		return;
-	}		
-	cnt ++;
-	
-	if( cnt <= time_ms )
-	{
-		Chassis_Target_Angle = -( cnt * k );
-	}
-	
-	else if( cnt <= (2 * time_ms) )
-	{
-		Chassis_Target_Angle = -( (2 * time_ms - cnt) * k );
-	}
-	
-		
-	else if( cnt <= (3 * time_ms))
-	{
-		Chassis_Target_Angle = ( (cnt - ( 2 * time_ms )) * k );
-	}
-	
-	else if( cnt <= (4 * time_ms))
-	{
-		Chassis_Target_Angle = ( (4 * time_ms - cnt) * k );
-	}
-	else
-	{
-		cnt = 0;
-		Chassis_Target_Angle = 0;
-	}
-	
-}
-
- 
-/********************************************
-	º¯ÊıÃû£ºvoid Chassis_Control(float Chassis_Target_Angle)
-  ¹¦ÄÜ£ºµ×ÅÌ¸úËæµÄPIDº¯Êı
-	ÊäÈë£ºChassis_Target_Angle£¬ÔÆÌ¨ºÍµ×ÅÌµÄÄ¿±ê¼Ğ½Ç
-	·µ»Ø£ºÎŞ
-	×¢Òâ£ºĞèÒªµ÷µÄ²ÎÊı£ºPIDºÍÏŞ·ù
-	*********************************************/
-float Chassis_Follow_Control(float Chassis_Target_Angle)
-{
-//µ×ÅÌË«»·¸úËæ/Êµ¼Êµ¥»·Ò²¿ÉÒÔ
-	float shell_delta=0,core_delta=0;
-	float shell_p_part=0;
-	float core_p_part=0,shell_out=0;
-	
-  float Now_6050_Angle=0;	
-	
-  static float Can_Angle_Speed=0;
-  static float Last_6050_Angle=0;	
-	
-	Now_6050_Angle=Holder.Yaw_6050_Angle;             //È¡µ±Ç°±àÂëÆ÷µÄ½Ç¶ÈÖµ
-	Can_Angle_Speed=Now_6050_Angle-Last_6050_Angle;   //Á½¸ö½Ç¶È²î·ÖµÃµ½½ÇËÙ¶È
-	Last_6050_Angle=Now_6050_Angle;
-		/***********PID***************/
-	shell_delta = Chassis_Target_Angle - Holder.Yaw_6050_Angle;  //½Ç¶ÈÆ«²î
-	shell_p_part=shell_delta*Chassis_Follow_PID.shell_P*0.1f;  //Î»ÖÃÊ½PIDµÄ±ÈÀı
-
-	shell_out=shell_p_part;
-
-	core_delta=shell_out+ Can_Angle_Speed;
-	core_p_part=core_delta*Chassis_Follow_PID.core_P*0.1f;    //ÄÚ»·PIDµÄP
-
-	if      (core_p_part>Chasiss_Follow_Limit)   core_p_part=Chasiss_Follow_Limit;
-	else if (core_p_part<-Chasiss_Follow_Limit)  core_p_part=-Chasiss_Follow_Limit;
-		
-
-return 	-core_p_part;
-
-}
-
-
-
 
 /*******************************************************************************
-* Function Name  : µ×ÅÌ½Ç¶È±Õ»·
+* Function Name  : åº•ç›˜è§’åº¦é—­ç¯
 * Description    : 
 * Input          : None 
 * Output         : None
@@ -219,7 +118,7 @@ int8_t Angle_Amended(void)
 
 		delta_angle = remote_interval - (-Holder.Yaw_6050_Angle * 2.0f);
 		angle_p_para = delta_angle * Subsection_Chassis_p(delta_angle) * 0.1f;
-		angle_interval += delta_angle;//ÔöÁ¿Ê½	
+		angle_interval += delta_angle;//å¢é‡å¼	
 		angle_i_para = angle_interval * Chassis_Angle_para.shell_I;
 		
 		angle_out = angle_p_para + angle_i_para;	
@@ -229,18 +128,18 @@ int8_t Angle_Amended(void)
 }
 
 /********************************************
-	º¯ÊıÃû£ºvoid Chassis_Remote_Dispack(void)  
-  ¹¦ÄÜ£º½«Ò£¿ØÆ÷·¢¹ıÀ´µÄÊı¾İ×ª»»³É×îÖÕÂÖ×ÓµÄÄ¿±êËÙ¶È
-	ÊäÈë£ºÎŞ
-	·µ»Ø£ºÎŞ
-	×¢Òâ£ºxyzÏµÊı·Ö±ğ¾ö¶¨ÁË³µ×ÓÇ°ºó×óÓÒºÍ×ªÏòµÄËÙ¶È
+	å‡½æ•°åï¼švoid Chassis_Remote_Dispack(void)  
+  åŠŸèƒ½ï¼šå°†é¥æ§å™¨å‘è¿‡æ¥çš„æ•°æ®è½¬æ¢æˆæœ€ç»ˆè½®å­çš„ç›®æ ‡é€Ÿåº¦
+	è¾“å…¥ï¼šæ— 
+	è¿”å›ï¼šæ— 
+	æ³¨æ„ï¼šxyzç³»æ•°åˆ†åˆ«å†³å®šäº†è½¦å­å‰åå·¦å³å’Œè½¬å‘çš„é€Ÿåº¦
 *********************************************/
 	float kp1=5.5f,kp2=6;
 float temp_left_LR;
 void Chassis_Remote_Dispack( uint8_t flag)  
 {
 	u8 i;
-	int16_t x=10.0f,y=10.0f;//·¢ËÍÊı¾İµçÁ÷Öµ·¶Î§ -5000~+5000, 10000/1320=8	xÊÇËÙ¶È
+	int16_t x=10.0f,y=10.0f;//å‘é€æ•°æ®ç”µæµå€¼èŒƒå›´ -5000~+5000, 10000/1320=8	xæ˜¯é€Ÿåº¦
 
 
 	float temp_right_UD,temp_right_LR;
@@ -308,15 +207,6 @@ void Chasis_Motion_Control(u8 mode)
 	} 
 	else if(mode==Attack)
 	{
-//	  Rock_Random(1);		
-//		if(_cnt%10==0)	
-//		{
-//	  Lets_Rock(0);	
-//	  temp=Chassis_Follow_Control(Chassis_Target_Angle);	
-//		}
-//		chassis_y0= soft_start( temp);  //Ê¹Ò¡°ÚÆ½»¬	
-//	  Chassis_Remote_Dispack(0,  0,  chassis_y0);  	
-
 			if(_cnt%10==0)	
 		{			
     Lets_Rock(0);			
@@ -335,10 +225,10 @@ void Chasis_Motion_Control(u8 mode)
 	else
 	{
 	 for(i=0;i<4;i++)
-	 Motor.Target_Speed[i]=0;   //¹ØµôÊä³ö
+	 Motor.Target_Speed[i]=0;   //å…³æ‰è¾“å‡º
 	}
 		
-	 odometry_encoder(Motor.Feedback_Speed);  //½âËãÀï³Ì¼Æ		
+	 odometry_encoder(Motor.Feedback_Speed);  //è§£ç®—é‡Œç¨‹è®¡		
 	 
 }
 
@@ -352,12 +242,12 @@ void odometry_encoder(int16_t * speed_raw_list)
 	}
 	Send.speed_x=(-u_list[0]+u_list[1]+u_list[2]-u_list[3])/4*1.414f/2/18.89f;
   Send.speed_y =(-u_list[0]-u_list[1]+u_list[2]+u_list[3])/4*1.414f/2/18.89f;
-  Send.angle_speed= -Holder.Yaw_Extern_Imu_Angle_Speed*1000/57.3f; //µ×ÅÌ½ÇËÙ¶È£¬µ¥Î»
+  Send.angle_speed= -Holder.Yaw_Extern_Imu_Angle_Speed*1000/57.3f; //åº•ç›˜è§’é€Ÿåº¦ï¼Œå•ä½
   Send.distance_x+=Send.speed_x/1000;
   Send.distance_y+=Send.speed_y/1000;
 }
 	
-//½Ç¶È±Õ»··Ö¶ÎPID
+//è§’åº¦é—­ç¯åˆ†æ®µPID
 float Subsection_Chassis_p(float input_delta)
 {
 	float Chassis_Angle_P;
