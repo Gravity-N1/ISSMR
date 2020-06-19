@@ -1,3 +1,0 @@
-/slam/ISSMR/show_by_opencv/build/CMakeFiles/rebuild_cache.dir
-/slam/ISSMR/show_by_opencv/build/CMakeFiles/usingopencv.dir
-/slam/ISSMR/show_by_opencv/build/CMakeFiles/edit_cache.dir

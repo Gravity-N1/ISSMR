@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libseg_shared.so -o libseg_shared.so CMakeFiles/seg_shared.dir/histogram.cpp.o CMakeFiles/seg_shared.dir/color.cpp.o CMakeFiles/seg_shared.dir/texture.cpp.o 

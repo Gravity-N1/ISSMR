@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././common/tiny-profiler.h
+unordered_map
+-
+chrono
+-
+iostream
+-
+cstring
+-
+
+/slam/ISSMR/collision avoidance/downsample.cpp
+downsample.h
+/slam/ISSMR/collision avoidance/downsample.h
+assert.h
+-
+emmintrin.h
+-
+smmintrin.h
+-
+
+/slam/ISSMR/collision avoidance/downsample.h
+opencv2/opencv.hpp
+-
+
+/slam/ISSMR/collision avoidance/rs-depth-filter.cpp
+librealsense2/rs.hpp
+-
+librealsense2/rs_advanced_mode.hpp
+-
+opencv2/opencv.hpp
+-
+fstream
+-
+tiny-profiler.h
+/slam/ISSMR/collision avoidance/tiny-profiler.h
+downsample.h
+/slam/ISSMR/collision avoidance/downsample.h
+

@@ -1,7 +1,0 @@
-/slam/ISSMR/collision avoidance/build/CMakeFiles/install/strip.dir
-/slam/ISSMR/collision avoidance/build/CMakeFiles/edit_cache.dir
-/slam/ISSMR/collision avoidance/build/CMakeFiles/rs-depth-filter.dir
-/slam/ISSMR/collision avoidance/build/CMakeFiles/rebuild_cache.dir
-/slam/ISSMR/collision avoidance/build/CMakeFiles/list_install_components.dir
-/slam/ISSMR/collision avoidance/build/CMakeFiles/install/local.dir
-/slam/ISSMR/collision avoidance/build/CMakeFiles/install.dir

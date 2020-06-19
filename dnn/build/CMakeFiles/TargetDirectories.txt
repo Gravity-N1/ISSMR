@@ -1,3 +1,0 @@
-/slam/ISSMR/dnn/build/CMakeFiles/rebuild_cache.dir
-/slam/ISSMR/dnn/build/CMakeFiles/main.dir
-/slam/ISSMR/dnn/build/CMakeFiles/edit_cache.dir

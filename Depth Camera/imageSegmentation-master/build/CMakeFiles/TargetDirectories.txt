@@ -1,0 +1,5 @@
+/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/seg_shared.dir
+/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/edit_cache.dir
+/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/main.dir
+/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/rebuild_cache.dir
+/slam/ISSMR/imageSegmentation-master/build/CMakeFiles/pic.dir
