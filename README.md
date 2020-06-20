@@ -12,7 +12,3 @@ This is the very beginning of the mobile robots
 # 技术细节
 
 关于相机：采用Intel Realsense D435 相机，基于其开源库进行开发，其仓库已经以子仓库的形式放在了本仓库。碰撞检测的基本思想为两种，一是进行图像分割然后匹配深度，而是直接利用其深度成像原理进行一个“高置信度”深度值的选取达到目标。更多细节见depth camera folder。
-
-关于UWB：
-
-关于
