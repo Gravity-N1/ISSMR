@@ -15,3 +15,5 @@
 <Serial_port_communication>文件中包含STM32与Raspberry Pi之间通信协议部分，包括了发送协议，接收协议，STM32暂时不需要向树莓派发送数据，因此发送函数未调用；  
 <MPU6050>文件中包含陀螺仪零点校准，读取陀螺仪数据及用卡尔曼滤波对数据进行处理。    
 <KalmanFilter.c>文件中包含卡尔曼滤波函数，使用时只需要根据文件说明定义2个参数，并给定Data入口，即可获得较好的滤波效果。  
+# 说明
+由于前期对Git使用不是很了解，文件放在项目Gravity-N1的其他仓库，详见：https://github.com/Gravity-N1/Communication-between-miniPC-with-STM32  
