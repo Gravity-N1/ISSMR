@@ -10,6 +10,6 @@
 4、串口通信：STM32与Raspberry Pi之间的数据通信  
 
 # 文件说明
-<wheel_control.c>文件中包含距离PID计算和角度PID计算，最后的输出适当放大匹配电机的电流值，输出至小车电机，控制小车运动；
-<Wheel_out.c>文件中包含电机速度环控制算法，还有CAN通信发送协议；
-<Serial_port_communication>文件中包含STM32与Raspberry Pi之间通信协议部分，包括了发送协议，接收协议，STM32暂时不需要向树莓派发送数据，因此发送函数未调用；
+<wheel_control.c>文件中包含距离PID计算和角度PID计算，最后的输出适当放大匹配电机的电流值，输出至小车电机，控制小车运动；  
+<Wheel_out.c>文件中包含电机速度环控制算法，还有CAN通信发送协议；  
+<Serial_port_communication>文件中包含STM32与Raspberry Pi之间通信协议部分，包括了发送协议，接收协议，STM32暂时不需要向树莓派发送数据，因此发送函数未调用；  
