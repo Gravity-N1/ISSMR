@@ -20,13 +20,11 @@ void USART6_IRQHandler(void)
 		DMA_Cmd(DMA2_Stream1, ENABLE);			
     if(USART6_RES[0]==0xaa)		
 		{
-			Recieve.sdim_stop_flag = USART6_RES[1];
-			
-			Recieve.sdim_distance = (USART6_RES[2]<<8|USART6_RES[3]);
-			
-			Recieve.sdim_angle_sign =(uint8_t)USART6_RES[4];
-			Recieve.sdim_angle    = abs((USART6_RES[5]<<8|USART6_RES[6])/10.0f);		 //1000
-			Recieve.sdim_data1    = ((int16_t)(USART6_RES[7]<<8|USART6_RES[8]))/100.0f;      //1000
+			Recieve.sdim_stop_flag = USART6_RES[1];                         //接收相机障碍物检测的停止标志位
+			Recieve.sdim_distance = (USART6_RES[2]<<8|USART6_RES[3]);       //用2位长度来接收人和车的相对距离
+			Recieve.sdim_angle_sign =(uint8_t)USART6_RES[4];                //夹角正负标志位
+			Recieve.sdim_angle    = abs((USART6_RES[5]<<8|USART6_RES[6])/10.0f); //车到人的向量相对X轴的夹角
+			Recieve.sdim_data1    = ((int16_t)(USART6_RES[7]<<8|USART6_RES[8]))/100.0f; //保留数据位
 			
 			if(Recieve.sdim_angle_sign>1)//flag=1,angle>0
 			  {Recieve.sdim_angle_out = Recieve.sdim_angle;}
@@ -37,7 +35,6 @@ void USART6_IRQHandler(void)
 }
 
 u8 	Flag_Uart_Busy=0;
-
 void DMA2_Stream7_IRQHandler(void)
 { 
   DMA_ClearFlag(DMA2_Stream7,DMA_FLAG_TCIF7);
@@ -60,7 +57,7 @@ void New_Send_Data(uint8_t *data,uint16_t size)
 	}	
 }
 
-//发送函数协议
+//串口通信发送函数协议
 void send_odm_msg(float * data)
 { 
 	int i=0; 
