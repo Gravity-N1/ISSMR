@@ -27,7 +27,7 @@ int8_t Angle_Amended(void)
 	angle_out = angle_p_para + angle_i_para;	
 	angle_speed_out = (float)Limiter(angle_out,1000);//输出限幅
 	Chassis_Target_Angle = -angle_speed_out;
-	//，由于UWB定位的问题，出现角度过0点问题，在y轴区域由180度——>-180度，本段解决角度在180是过0点问题
+	//由于UWB定位的问题，出现角度过0点问题，在y轴区域由180度——>-180度，本段解决角度在180是过0点问题
 	if(Chassis_Target_Angle > 180)
 	 {
 	    Chassis_Target_Angle = Chassis_Target_Angle-360;
@@ -116,7 +116,7 @@ void Diatance_Amended(void)
 	float dis_out=0;
 	float target_distance=1000.0f;//目标距离1000mm
 
-	delta_dis = target_distance - Recieve.sdim_distance;
+	delta_dis = Recieve.sdim_distance - target_distance;
 	dis_p_para = delta_dis * Chassis_Dis_pare.shell_P;//结构体参数P
 	dis_interval += delta_dis;//增量式PID	
 	dis_i_para = dis_interval * Chassis_Dis_para.shell_I;//结构体参数I
