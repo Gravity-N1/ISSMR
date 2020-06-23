@@ -1,12 +1,11 @@
 /*函数名：void USART6_IRQHandler(void)  
-  功能：
-			1：接收视觉处理障碍物判断
-			2：接收UWB坐标信息，人与车的相对角度信息
-
-	输入：无
-	返回：无
-	协议：0xaa  xx xx xx xx xx  0xdd
-	*/
+功能：  
+1：接收视觉处理障碍物判断
+2：接收UWB坐标信息，人与车的相对角度信息
+输入：无
+返回：无
+协议：0xaa  xx xx xx xx xx  0xdd
+*/
 //串口6接收中断
 u32 Usart6_cnt=0; 
 float test_dis=0;
